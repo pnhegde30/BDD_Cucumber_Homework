@@ -49,7 +49,7 @@ public class LoginStepDefinition extends TestBase {
 	public void user_should_land_on_dashboard_page() throws Throwable {
 		String expectedTitle = "Dashboard- iBiiling";
 		String actualTitle = loginPage.getPageTitle();
-		Assert.assertEquals(expectedTitle, actualTitle);
+		Assert.assertEquals(expectedTitle, actualTitle, "Pages titles are not matching");
 		Thread.sleep(3000);
 		takeScreenshot(driver); //takes a screenshot
 	}

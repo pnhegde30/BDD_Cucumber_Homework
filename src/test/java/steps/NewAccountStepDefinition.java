@@ -28,11 +28,26 @@ NewAccountPage newAccountDetails;
 	}
 
 	@When("^User enters username as \"([^\"]*)\" and password as \"([^\"]*)\"$" )
+	//String data in parenthesis
 	public void user_enters_username_as(String username, String password) throws Throwable {
 		loginPage.enterUserName(username);
 		loginPage.enterPassword(password);
 		Thread.sleep(3000);
 	}
+/*
+ 	switch (data)
+ 	case "username":
+ 		loginPage.enterUserName(username);
+ 		Thread.sleep(3000);
+ 		break;
+ 	case "password":
+ 		loginPage.enterPassword(password);
+ 		Thread.sleep(3000);
+ 		break;
+ 	default: 
+ 		System.out.println("Unable to verify username and/or password);
+  
+ */
 
 //	@When("^User enters password as \"([^\"]*)\"$")
 //	public void user_enters_password_as(String password) throws Throwable {
